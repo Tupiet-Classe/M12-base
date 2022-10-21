@@ -14,9 +14,19 @@ header#small-header i {
 
 header#big-header {
     background: #ccc;
+    margin: 0 1em;
 }
 
 header#big-header i {
+    font-size: 1.5em;
+}
+
+main.tu-main button {
+    margin: 1em;
+    background: #ccc;   
+}
+
+main.tu-main i {
     font-size: 1.5em;
 }
 
