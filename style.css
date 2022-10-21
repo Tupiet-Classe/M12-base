@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+}
+
+#small-header button {
+    margin: 0.5em 1em 0 1em;
+    background: #ccc;
+}
+
+header#small-header i {
+    padding: 0.2em;
+    font-size: 1.5em;
+}
+
+footer {
+    background: #ccc;
+    margin: 0 1em;
+}
+
+footer i {
+    font-size: 1.5em;
+}
