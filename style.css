@@ -2,13 +2,21 @@ body {
     height: 100vh;
 }
 
-#small-header button {
+header#small-header button {
     margin: 0.5em 1em 0 1em;
     background: #ccc;
 }
 
 header#small-header i {
     padding: 0.2em;
+    font-size: 1.5em;
+}
+
+header#big-header {
+    background: #ccc;
+}
+
+header#big-header i {
     font-size: 1.5em;
 }
 
