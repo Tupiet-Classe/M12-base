@@ -3,10 +3,11 @@
 /* ----------- */
 
 :root {
-    --tu-header-heigth: 4em; /* Alçada del header */
-    --tu-footer-heigth: 4em; /* Alçada del footer */
-    --tu-bg-grey: #ccc; /* Color d'alguns fons */
-    --tu-icon-size: 1.5rem; /* Mesura de les icones */
+    --tu-header-heigth: 4em;        /* Alçada del header */
+    --tu-footer-heigth: 4em;        /* Alçada del footer */
+    --tu-bg-grey: #ccc;           /* Color d'alguns fons */
+    --tu-icon-size: 1.5rem;         /* Mesura de les icones */
+    --tu-icon-hover-color: #777;  /* Color de les icones al fer-los hover */
 }
 
 /* -------- */
@@ -32,7 +33,7 @@ button {
 }
 
 button:hover {
-    color: #777;
+    color: var(--tu-icon-hover-color);
 }
 
 /* ------------ */
