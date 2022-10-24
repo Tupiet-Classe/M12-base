@@ -1,40 +1,54 @@
-body {
-    height: 100vh;
+/* ----------- */
+/*  Variables  */
+/* ----------- */
+
+:root {
+    --tu-header-heigth: 4em; /* Alçada del header */
+    --tu-footer-heigth: 4em; /* Alçada del footer */
+    --tu-bg-grey: #ccc; /* Color d'alguns fons */
+    --tu-icon-size: 1.5rem; /* Mesura de les icones */
 }
 
-header#small-header button {
-    margin: 0.5em 1em 0 1em;
-    background: #ccc;
+/* -------- */
+/*  Estils  */
+/* -------- */
+
+/* Declarem la mesura de les icones */
+i {
+    font-size: var(--tu-icon-size);
 }
 
-header#small-header i {
-    padding: 0.2em;
-    font-size: 1.5em;
+/* Certs elements necessiten un color de fons */
+header#small-header button, header#big-header, main.tu-main button, footer {
+    background: var(--tu-bg-grey);
 }
 
-header#big-header {
-    background: #ccc;
-    margin: 0 1em;
+/* ------------ */
+/*  Responsive  */
+/* ------------ */
+
+/* Declarem l'alçada del header */
+header {
+    height: var(--tu-header-heigth);
 }
 
-header#big-header i {
-    font-size: 1.5em;
+main {
+    height: var(--tu-main-heigth);
 }
 
-main.tu-main button {
-    margin: 1em;
-    background: #ccc;   
-}
-
-main.tu-main i {
-    font-size: 1.5em;
-}
-
+/* Declarem l'alçada del footer */
 footer {
-    background: #ccc;
-    margin: 0 1em;
+    height: var(--tu-footer-heigth);
 }
 
-footer i {
-    font-size: 1.5em;
+/* Declarem l'alçada del main en mode ordinador, que serà el total (100vh) menys la del header i del footer */
+main.tu-main {
+    height: calc(100vh - var(--tu-header-heigth) - var(--tu-footer-heigth));
+}
+
+/* En cas d'estar en pantalla reduïda, l'alçada serà tota menys la del header */
+@media screen and (min-width: 576px) {
+    main.tu-main {
+        height: calc(100vh - var(--tu-header-heigth));
+    }
 }
