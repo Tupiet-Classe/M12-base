@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap_bad.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="search.css">
+    <script src="search.js"></script>
 
 </head>
 <body class="w-100">
@@ -28,7 +30,10 @@
         <div class="d-inline-flex">
         </div>
         <div class="d-inline-flex p-2">
-            <button class="border-0 bg-transparent shadow-none px-3"><i class="fa fa-search"></i></button>
+            <form>
+                <button class="border-0 bg-transparent shadow-none px-2" onClick="hidesearchinput()"><i class="fa fa-search"></i></button>
+                <input id="input1" class="input1 input2" type="text" name="search" placeholder="Search..">
+            </form>
             <button class="border-0 bg-transparent shadow-none px-3"><i class="fa fa-comments"></i></button>
             <button class="border-0 bg-transparent shadow-none px-3"><i class="fa fa-bell"></i></button>
             <button class="border-0 bg-transparent shadow-none px-3"><i class="fa fa-user"></i></button>
