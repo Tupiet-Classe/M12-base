@@ -23,6 +23,18 @@ header#small-header button, header#big-header, main.tu-main button, footer {
     background: var(--tu-bg-grey);
 }
 
+/* -------- */
+/*  Hovers  */
+/* -------- */
+
+button {
+    transition: color 0.5s ease;
+}
+
+button:hover {
+    color: #777;
+}
+
 /* ------------ */
 /*  Responsive  */
 /* ------------ */
