@@ -41,16 +41,16 @@ button:hover {
 /* ------------ */
 
 /* Declarem l'alçada del header */
-header {
+body > header {
     height: var(--tu-header-heigth);
 }
 
-main {
+body > main {
     height: var(--tu-main-heigth);
 }
 
 /* Declarem l'alçada del footer */
-footer {
+body > footer {
     height: var(--tu-footer-heigth);
 }
 
@@ -64,4 +64,45 @@ main.tu-main {
     main.tu-main {
         height: calc(100vh - var(--tu-header-heigth));
     }
+}
+
+/* -------- */
+/*  PROVES  */
+/* -------- */
+
+/* Aquests estils són PROVISIONALS i només per fer proves */
+
+/* POST */
+
+body form {
+    max-width: 30em;
+}
+
+textarea {
+    resize: none;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.message {
+    padding: 0.5em;
+    margin-bottom: 1em;
+}
+
+.user-icon {
+    width: 3em;
+    height: 3em;
+}
+
+.btn-follow {
+    width: fit-content;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 0 0.5em;
+    text-align: center;
+}
+
+.btn-follow:hover {
+    border: 1px black solid;
+    background: #ccc;
 }
