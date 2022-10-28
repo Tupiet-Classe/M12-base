@@ -1,21 +1,21 @@
 function hidesearchinput(){
     //document.getElementById("incorrect").style.visibility = "hidden";//
     document.getElementById("input1").style.display = "inline-block";
-    var hiddenbutton = document.getElementById("input1").value;
+    
 
-    function hiddeinput(){ 
-        document.getElementById("input1").style.display = "none";
+    function hiddeinput(){
+        var hiddenbutton = document.getElementById("input1").value;
+            if (hiddenbutton == "") {
+            document.getElementById("input1").style.display = "none";
+            } else {
+                clearTimeout(identificadorIntervaloDeTiempo)
+            }
     }
 
     function ocultarinput() {
-        if (hiddenbutton === null) {
-        identificadorIntervaloDeTiempo = setInterval(hiddeinput, 3000);
-        } else {
-                document.getElementById("input1").style.display = "inline-block";
-        }
-    }
+        identificadorIntervaloDeTiempo = setTimeout(hiddeinput, 5000);
+      }
 
     ocultarinput();
-    
 }
 
