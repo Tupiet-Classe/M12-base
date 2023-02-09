@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MirMeet</title>
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <style>
+            :root {
+                --red: rgb(198, 80, 54);
+                --cyan: rgb(130, 203, 212);
+                --purple: rgb(48, 30, 74);
+            }
+
+            html {
+                box-sizing: border-box;
+            }
+            .text-red {
+                color: var(--red);
+            }
+            .text-cyan {
+                color: var(--cyan);
+            }
+            .text-purple {
+                color: var(--purple);
+            }
+    
+            .bg-red {
+                background: var(--red);
+            }
+            .bg-cyan {
+                background: var(--cyan);
+            }
+            .bg-purple {
+                background: var(--purple);
+            }
+        </style>
+    </head>
+<body>
+    <div class="posts sm:w-3/4 flex flex-col items-center gap-3 overflow-scroll bg-slate-200">
+        <div class="post w-3/4">
+            <div class="info bg-cyan w-full m-5 p-3 rounded-lg">
+                <p>Hola</p>
+            </div>
+            <div class="images"></div>
+            <div class="content"></div>
+        </div>
+    </div>
+</body>
+</html>
