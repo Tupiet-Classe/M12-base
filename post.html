@@ -40,14 +40,35 @@
             }
         </style>
     </head>
-<body>
-    <div class="posts sm:w-3/4 flex flex-col items-center gap-3 overflow-scroll bg-slate-200">
-        <div class="post w-3/4">
-            <div class="info bg-cyan w-full m-5 p-3 rounded-lg">
-                <p>Hola</p>
+<body class="flex w-screen justify-center">
+    <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-scroll bg-slate-200">
+        <div class="post flex flex-col items-center" style="width: 340px;">
+            <div class="info bg-cyan w-full m-5 p-3 rounded-lg flex flex-row">
+                <div class="user-image w-16">
+                    <img src="demo_img/bot.png" alt="logo">
+                </div>
+                <div class="other-content w-full flex justify-between">
+                    <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
+                        <span class="username">@tupiet</span>
+                        <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
+                    </div>
+
+                    <div class="extra-info flex gap-x-3 items-baseline">
+                        <span class="time">Hace 3 días</span>
+                        <i class="fa-solid fa-ellipsis-vertical text-purple"></i>
+                    </div>
+                </div>
             </div>
-            <div class="images"></div>
-            <div class="content"></div>
+
+            <div class="images w-full mx-5 mt-1">
+                <div class="image w-full">
+                    <img src="demo_img/landscape.jpg" alt="image" class="rounded-md">
+                </div>
+            </div>
+
+            <div class="content bg-cyan w-full m-5 p-3 rounded-lg flex flex-row">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
+            </div>
         </div>
     </div>
 </body>
