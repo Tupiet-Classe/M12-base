@@ -6,14 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MirMeet</title>
 
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Familjen+Grotesk&display=swap" rel="stylesheet">    
+    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <style>
+    <style>       
         :root {
             --red: rgb(198, 80, 54);
             --cyan: rgb(130, 203, 212);
             --purple: rgb(48, 30, 74);
+        }
+
+        html {
+            box-sizing: content-box;
         }
 
         .text-red {
@@ -38,7 +49,7 @@
     </style>
 </head>
 <body class="flex flex-col h-screen max-h-screen bg-slate-200">
-    <header class="flex justify-between sm:hidden mt-3 mx-3">
+    <header class="flex justify-between sm:hidden mx-3 py-3">
         <button class="bg-red rounded-full w-12"><i class="fa fa-user p-2 text-2xl"></i></button>
         <button class="bg-red rounded-full w-12"><i class="fa fa-comments p-2 text-2xl"></i></button>
     </header>
@@ -57,9 +68,38 @@
         </div>
     </header>
 
-    <main class="h-full p-3 flex flex-col items-center gap-3 overflow-scroll">
+    <main class="h-full w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden" style="font-family: 'Familjen Grotesk';">
 
-        <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-scrol">
+        <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-y-scroll">
+            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
+                <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
+                    <div class="user-image w-16">
+                        <img src="demo_img/bot.png" alt="logo">
+                    </div>
+                    <div class="other-content w-full flex justify-between">
+                        <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
+                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
+                            <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
+                        </div>
+    
+                        <div class="extra-info flex gap-x-3 items-baseline">
+                            <span class="time text-sm">Hace 3 días</span>
+                            <i class="fa-solid fa-ellipsis-vertical text-purple cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="images w-full mx-5 mt-1">
+                    <div class="image w-full">
+                        <img src="demo_img/landscape.jpg" alt="image" class="rounded-md">
+                    </div>
+                </div>
+    
+                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
+                </div>
+            </div>
+
             <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
@@ -72,8 +112,8 @@
                         </div>
     
                         <div class="extra-info flex gap-x-3 items-baseline">
-                            <span class="time">Hace 3 días</span>
-                            <i class="fa-solid fa-ellipsis-vertical text-purple"></i>
+                            <span class="time text-sm">Hace 3 días</span>
+                            <i class="fa-solid fa-ellipsis-vertical text-purple cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
@@ -84,7 +124,7 @@
                     </div>
                 </div>
     
-                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row">
+                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
                 </div>
             </div>
@@ -100,8 +140,8 @@
                         </div>
     
                         <div class="extra-info flex gap-x-3 items-baseline">
-                            <span class="time">Hace 3 días</span>
-                            <i class="fa-solid fa-ellipsis-vertical text-purple"></i>
+                            <span class="time text-sm">Hace 3 días</span>
+                            <i class="fa-solid fa-ellipsis-vertical text-purple cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
@@ -112,35 +152,7 @@
                     </div>
                 </div>
     
-                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
-                </div>
-            </div>
-            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
-                <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
-                    <div class="user-image w-16">
-                        <img src="demo_img/bot.png" alt="logo">
-                    </div>
-                    <div class="other-content w-full flex justify-between">
-                        <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username">@tupiet</span>
-                            <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
-                        </div>
-    
-                        <div class="extra-info flex gap-x-3 items-baseline">
-                            <span class="time">Hace 3 días</span>
-                            <i class="fa-solid fa-ellipsis-vertical text-purple"></i>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="images w-full mx-5 mt-1">
-                    <div class="image w-full">
-                        <img src="demo_img/landscape.jpg" alt="image" class="rounded-md">
-                    </div>
-                </div>
-    
-                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row">
+                <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
                 </div>
             </div>
