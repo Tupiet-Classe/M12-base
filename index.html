@@ -15,16 +15,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Familjen+Grotesk&display=swap" rel="stylesheet">    
     <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
     <style>       
         :root {
             --red: rgb(198, 80, 54);
             --cyan: rgb(130, 203, 212);
             --purple: rgb(48, 30, 74);
+            --viewport-height: 100%;
         }
 
         html {
-            box-sizing: content-box;
+            box-sizing: border-box;
         }
 
         .text-red {
@@ -48,10 +50,10 @@
         }
     </style>
 </head>
-<body class="flex flex-col h-screen max-h-screen bg-slate-200">
-    <header class="flex justify-between sm:hidden mx-3 py-3">
-        <button class="bg-red rounded-full w-12"><i class="fa fa-user p-2 text-2xl"></i></button>
-        <button class="bg-red rounded-full w-12"><i class="fa fa-comments p-2 text-2xl"></i></button>
+<body class="flex flex-col h-screen max-h-screen bg-slate-200" style="min-height: -webkit-fill-available">
+    <header class="flex justify-between sm:hidden mx-3 py-2 h-32">
+        <button class="bg-red rounded-full w-12"><i class="fa fa-user text-2xl"></i></button>
+        <button class="bg-red rounded-full w-12"><i class="fa fa-comments text-2xl"></i></button>
     </header>
 
     <header class="hidden justify-between bg-red p-3 sm:flex">
@@ -68,7 +70,7 @@
         </div>
     </header>
 
-    <main class="h-full w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden" style="font-family: 'Familjen Grotesk';">
+    <main class="main-heigth w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden" style="font-family: 'Familjen Grotesk';">
 
         <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-y-scroll">
             <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
@@ -160,14 +162,28 @@
         </div>
     </main>
 
-    <footer class="flex justify-around bg-red p-3 sm:hidden">
+    <footer class="flex justify-around bg-red p-3 sm:hidden h-16">
         <button class=""><i class="fa fa-house text-2xl"></i></button>
         <button class=""><i class="fa fa-compass text-2xl"></i></button>
-        <button class="bg-purple px-3 py-2 rounded-md"><i class="fa fa-add text-2xl text-white"></i></button>
+        <button class="bg-purple px-3 py-1 rounded-md"><i class="fa fa-add text-2xl text-white"></i></button>
         <button class=""><i class="fa fa-search text-2xl"></i></button>
         <button class=""><i class="fa fa-bell text-2xl"></i></button>
     </footer>
 
     <button class="hidden sm:block absolute bottom-0 right-0 p-3 bg-red rounded-lg px-3 py-2 m-4 text-lg"><i class="fa fa-add text-white"></i></button>
+
+    <script>
+        
+            $('body').css("max-height", $(window).outerHeight());
+            $('body').css("min-height", $(window).outerHeight());
+            $( window ).resize(function(e) {
+                $('body').css("max-height", $(window).outerHeight());
+                $('body').css("min-height", $(window).outerHeight());
+            });
+        // document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`)
+        // visualViewport.addEventListener('resize', () => {
+        //     document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`);
+        // });
+    </script>
 </body>
 </html>
