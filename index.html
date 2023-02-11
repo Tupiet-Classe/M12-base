@@ -17,6 +17,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'comfortaa': ['Comfortaa', 'sans-serif'],
+                        'body': ['"Familjen Grotesk"', 'sans-serif']
+                    },
+                },
+            }
+        }
+
+    </script>
+
     <style>       
         :root {
             --red: rgb(198, 80, 54);
@@ -73,6 +87,7 @@
     <main class="main-heigth w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden" style="font-family: 'Familjen Grotesk';">
 
         <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-y-scroll">
+
             <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
@@ -80,7 +95,7 @@
                     </div>
                     <div class="other-content w-full flex justify-between">
                         <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
+                            <span class="username text-sm font-comfortaa font-semibold">@tupiet</span>
                             <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
                         </div>
     
@@ -116,7 +131,7 @@
                     </div>
                     <div class="other-content w-full flex justify-between">
                         <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
+                            <span class="username text-sm font-comfortaa font-semibold">@tupiet</span>
                             <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
                         </div>
     
@@ -152,7 +167,7 @@
                     </div>
                     <div class="other-content w-full flex justify-between">
                         <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
+                            <span class="username text-sm font-comfortaa font-semibold">@tupiet</span>
                             <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
                         </div>
     
