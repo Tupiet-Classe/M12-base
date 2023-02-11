@@ -100,6 +100,13 @@
                 <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
                 </div>
+    
+                <div class="options bg-purple w-full flex justify-around mx-5 p-1 rounded-lg text-white text-xl">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa fa-retweet"></i></button>
+                    <button><i class="fa-regular fa-comment"></i></button>
+                    <button><i class="fa fa-share"></i></button>
+                </div>
             </div>
 
             <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
@@ -109,7 +116,7 @@
                     </div>
                     <div class="other-content w-full flex justify-between">
                         <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username">@tupiet</span>
+                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
                             <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
                         </div>
     
@@ -129,7 +136,15 @@
                 <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
                 </div>
+    
+                <div class="options bg-purple w-full flex justify-around mx-5 p-1 rounded-lg text-white text-xl">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa fa-retweet"></i></button>
+                    <button><i class="fa-regular fa-comment"></i></button>
+                    <button><i class="fa fa-share"></i></button>
+                </div>
             </div>
+
             <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
@@ -137,7 +152,7 @@
                     </div>
                     <div class="other-content w-full flex justify-between">
                         <div class="user-info flex flex-col h-full justify-around ml-4 gap-y-1">
-                            <span class="username">@tupiet</span>
+                            <span class="username text-sm" style="font-family: 'Comfortaa'; font-weight: 600;">@tupiet</span>
                             <button class="btn-follow bg-purple rounded-xl py-0.5 px-4 text-white">Seguir</button>
                         </div>
     
@@ -156,6 +171,13 @@
     
                 <div class="content bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row text-sm">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis officiis eos est neque modi explicabo commodi asperiores, delectus laboriosam. Numquam asperiores quod fugit odio obcaecati quae autem molestias deserunt!</p>
+                </div>
+    
+                <div class="options bg-purple w-full flex justify-around mx-5 p-1 rounded-lg text-white text-xl">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa fa-retweet"></i></button>
+                    <button><i class="fa-regular fa-comment"></i></button>
+                    <button><i class="fa fa-share"></i></button>
                 </div>
             </div>
 
@@ -173,17 +195,12 @@
     <button class="hidden sm:block absolute bottom-0 right-0 p-3 bg-red rounded-lg px-3 py-2 m-4 text-lg"><i class="fa fa-add text-white"></i></button>
 
     <script>
-        
             $('body').css("max-height", $(window).outerHeight());
             $('body').css("min-height", $(window).outerHeight());
             $( window ).resize(function(e) {
                 $('body').css("max-height", $(window).outerHeight());
                 $('body').css("min-height", $(window).outerHeight());
             });
-        // document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`)
-        // visualViewport.addEventListener('resize', () => {
-        //     document.documentElement.style.setProperty('--viewport-height', `${visualViewport.height}px`);
-        // });
     </script>
 </body>
 </html>
