@@ -32,6 +32,9 @@
     </script>
 
     <style>       
+        ::-webkit-scrollbar {
+            display: none;
+        }
         :root {
             --red: rgb(198, 80, 54);
             --cyan: rgb(130, 203, 212);
@@ -64,7 +67,7 @@
         }
     </style>
 </head>
-<body class="flex flex-col h-screen max-h-screen bg-slate-200" style="min-height: -webkit-fill-available">
+<body class="flex flex-col h-screen max-h-screen bg-slate-200 overflow-x-hidden">
     <header class="flex justify-between sm:hidden mx-3 py-2 h-16">
         <button class="bg-red rounded-full w-12"><i class="fa fa-user text-2xl"></i></button>
         <button class="bg-red rounded-full w-12"><i class="fa fa-comments text-2xl"></i></button>
@@ -84,11 +87,11 @@
         </div>
     </header>
 
-    <main class="main-heigth h-full w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden" style="font-family: 'Familjen Grotesk';">
+    <main class="main-heigth h-full w-full px-3 flex flex-col items-center gap-3 overflow-y-scroll overflow-x-hidden font-body">
 
-        <div class="posts sm:w-96 flex flex-col items-center gap-3 overflow-y-scroll">
+        <div class="posts w-full sm:w-96 flex flex-col items-center gap-3 overflow-y-scroll">
 
-            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
+            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
                         <img src="demo_img/bot.png" alt="logo">
@@ -133,7 +136,7 @@
                 </div>
             </div>
 
-            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
+            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
                         <img src="demo_img/bot.png" alt="logo">
@@ -178,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4" style="width: 360px;">
+            <div class="post flex flex-col gap-y-3 items-center bg-white rounded-md p-4">
                 <div class="info bg-cyan w-full mx-5 p-3 rounded-lg flex flex-row gap-y-3">
                     <div class="user-image w-16">
                         <img src="demo_img/bot.png" alt="logo">
